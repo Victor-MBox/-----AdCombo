@@ -1,16 +1,142 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
     <title>ТЗ Мацаков Виктор</title>
 </head>
+
 <body>
-    
-<h1>Проверка связи</h1> 
+
+    <section class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="#">Logo</a>
+            </div>
+            <button class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="header__menu">
+                <ul class="menu">
+                    <li><a href="#">People nearbu</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Premium
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 1.5H15L19 6.5M10 1.5L13 6.5M10 1.5H5L1 6.5M10 1.5L7 6.5M19 6.5L10 16.5M19 6.5H13M10 16.5L13 6.5M10 16.5L1 6.5M10 16.5L7 6.5M13 6.5H7M1 6.5H7"
+                                    stroke="#FFCF2D" stroke-width="1.5" />
+                            </svg>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="main-section__title">
+                <h1>Закончились кредиты?</h1>
+            </div>
+
+            <!-- СКИДКА -->
+
+            <div class="main-section__slider slider">
+                <div class="slider__item">
+                    <div class="slider__offer">One time offer!</div>
+                    <div class="slider__price"> 50 <span>CR</span> / $5</div>
+                </div>
+                <div class="slider__pagination"></div>
+            </div>
+
+            <div class="main-section__btn">
+                <button class="btn">Try now</button>
+                <form>
+                    <input id="html" type="checkbox">
+                    <label for="html">By clicking Checkbox you agree and accept our <a class="label-links"
+                            href="#">Privacy Policy</a>, and <a class="label-links" href="#">Terms of use</a></label>
+                </form>
+            </div>
+
+            <div class="main-section__icon-box icon-box">
+
+                <div class="icon-box__item">
+                    <svg width="131" height="110" viewBox="0 0 131 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M65.5 1H101.333L130 36.6667M65.5 1L87 36.6667M65.5 1H29.6667L1 36.6667M65.5 1L44 36.6667M130 36.6667L65.5 108M130 36.6667H87M65.5 108L87 36.6667M65.5 108L1 36.6667M65.5 108L44 36.6667M87 36.6667H44M1 36.6667H44"
+                            stroke="#FFCF2D" stroke-width="1.5" />
+                    </svg>
+                </div>
+
+                <div class="icon-box__item">
+                    <div class="icon-box__icon-wrapper">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.18701 19.8042L10.2738 16H18.187C19.2916 16 20.187 15.1046 20.187 14V2C20.187 0.89543 19.2916 0 18.187 0H2.18701C1.08244 0 0.187012 0.89543 0.187012 2V14C0.187012 15.1046 1.08244 16 2.18701 16H4.18701V19.8042ZM9.70022 14L6.18701 16.1958V14H2.18701V2H18.187V14H9.70022Z"
+                                fill="#9564AA" />
+                            <rect x="5.18701" y="5" width="10" height="2" fill="#9564AA" />
+                            <rect x="5.18701" y="9" width="10" height="2" fill="#9564AA" />
+                        </svg>
+                    </div>
+                    <div class="icon-box__text">Отправлять сообщения</div>
+                </div>
+
+                <div class="icon-box__item">
+                    <div class="icon-box__icon-wrapper">
+                        <svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.18703 8.8042C7.18703 11.0133 8.9779 12.8042 11.187 12.8042C13.3962 12.8042 15.187 11.0133 15.187 8.8042C15.187 6.59506 13.3962 4.8042 11.187 4.8042C8.9779 4.8042 7.18703 6.59506 7.18703 8.8042ZM13.187 8.8042C13.187 9.90877 12.2916 10.8042 11.187 10.8042C10.0825 10.8042 9.18703 9.90877 9.18703 8.8042C9.18703 7.69963 10.0825 6.8042 11.187 6.8042C12.2916 6.8042 13.187 7.69963 13.187 8.8042Z"
+                                fill="#9564AA" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.187 0.804199C13.9146 0.804199 16.5227 2.23482 18.9533 4.58535C19.7825 5.38725 20.5327 6.24336 21.1931 7.09982C21.5916 7.61664 21.8746 8.02319 22.0295 8.2654L22.3741 8.8042L22.0295 9.343C21.8746 9.5852 21.5916 9.99176 21.1931 10.5086C20.5327 11.365 19.7825 12.2212 18.9533 13.023C16.5227 15.3736 13.9146 16.8042 11.187 16.8042C8.45949 16.8042 5.85136 15.3736 3.42074 13.023C2.59153 12.2212 1.84134 11.365 1.18094 10.5086C0.782441 9.99176 0.499509 9.5852 0.3446 9.343L0 8.8042L0.3446 8.2654C0.499509 8.02319 0.782441 7.61664 1.18094 7.09982C1.84134 6.24336 2.59153 5.38725 3.42074 4.58535C5.85136 2.23482 8.45949 0.804199 11.187 0.804199ZM19.6093 8.32108C19.0046 7.53692 18.3172 6.7524 17.563 6.02305C15.4695 3.99857 13.2921 2.8042 11.187 2.8042C9.08196 2.8042 6.90453 3.99857 4.81108 6.02305C4.05687 6.7524 3.36942 7.53692 2.76478 8.32108C2.63419 8.49043 2.51352 8.65202 2.4032 8.8042C2.51352 8.95638 2.63419 9.11796 2.76478 9.28732C3.36942 10.0715 4.05687 10.856 4.81108 11.5853C6.90453 13.6098 9.08196 14.8042 11.187 14.8042C13.2921 14.8042 15.4695 13.6098 17.563 11.5853C18.3172 10.856 19.0046 10.0715 19.6093 9.28732C19.7399 9.11796 19.8605 8.95638 19.9709 8.8042C19.8605 8.65202 19.7399 8.49043 19.6093 8.32108Z"
+                                fill="#9564AA" />
+                        </svg>
+                        <div class="icon-box__text">Просматривать скрытые фото</div>
+                    </div>
+                </div>
+
+                <div class="icon-box__item">
+                    <div class="icon-box__icon-wrapper">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.49704 5C3.16883 4.46338 3 3.80285 3 3C3 1.41709 4.19035 0 6 0C7.81199 0 9.27327 1.21363 10 3.11383C10.7267 1.21363 12.188 0 14 0C15.8096 0 17 1.41709 17 3C17 3.80285 16.8312 4.46338 16.503 5H18C19.1046 5 20 5.89543 20 7V9C20 10.1046 19.1046 11 18 11V18C18 19.1046 17.1046 20 16 20H4C2.89543 20 2 19.1046 2 18V11C0.89543 11 0 10.1046 0 9V7C0 5.89543 0.89543 5 2 5H3.49704ZM9 7H2V9H9V7ZM18 9H11V7H18V9ZM9 18V11H4V18H9ZM16 18H11V11H16V18ZM6 2C5.37965 2 5 2.45196 5 3C5 4.25323 6.017 4.84912 8.42942 4.97449C8.1613 3.1116 7.16218 2 6 2ZM11.5 4.97449C11.7681 3.1116 12.7672 2 13.9294 2C14.5498 2 14.9294 2.45196 14.9294 3C14.9294 4.25323 13.9124 4.84912 11.5 4.97449Z"
+                                fill="#9564AA" />
+                        </svg>
+                        <div class="icon-box__text">Оплачивать подарки</div>
+                    </div>
+                </div>
+
+                <div class="icon-box__item">
+                    <div class="icon-box__icon-wrapper">
+                        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.7402 0.804215C14.2926 0.804199 13.3594 0.975582 12.2897 1.49591C11.8936 1.68855 11.5221 1.92055 11.177 2.19121C10.8452 1.93572 10.4885 1.71438 10.1088 1.52777C9.01833 0.991792 8.03729 0.804199 6.64156 0.804199C2.90345 0.804199 0.187012 3.88206 0.187012 7.87946C0.187012 10.8983 1.88084 13.8144 5.03585 16.6343C6.69191 18.1144 8.80633 19.5791 10.3206 20.3584L11.187 20.8042L12.0534 20.3584C13.5677 19.5791 15.6821 18.1144 17.3382 16.6343C20.4932 13.8144 22.187 10.8983 22.187 7.87946C22.187 3.92437 19.445 0.819461 15.7402 0.804215ZM20.187 7.87946C20.187 10.2446 18.7732 12.6786 16.0007 15.1565C14.4892 16.5075 12.546 17.8576 11.187 18.5659C9.82805 17.8576 7.88483 16.5075 6.37329 15.1565C3.60083 12.6786 2.18701 10.2446 2.18701 7.87946C2.18701 4.92592 4.07065 2.79167 6.64156 2.79167C7.75129 2.79167 8.43514 2.92243 9.22215 3.30925C9.68702 3.53773 10.0979 3.83943 10.4535 4.21645L11.1893 4.99646L11.9185 4.21027C12.2821 3.81814 12.699 3.50958 13.1689 3.28101C13.9329 2.90942 14.574 2.79167 15.7361 2.79167C18.2752 2.80213 20.187 4.96691 20.187 7.87946Z"
+                                fill="#9564AA" />
+                        </svg>
+                        <div class="icon-box__text">Пользоваться другими премиум
+                            функциями</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 
     <!-- Scripts -->
-    <script src="js/script.js"></script>
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>
