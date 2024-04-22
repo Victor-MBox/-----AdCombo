@@ -1,52 +1,4 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-html {
-  height: 100%;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -390,13 +342,58 @@ template {
   display: none;
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .container {
@@ -407,26 +404,139 @@ a {
   margin-left: auto;
 }
 
-.icon-box__icon-wrapper svg path, .icon-box__icon-wrapper svg rect {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  border-radius: 10px;
+  background: rgb(149, 100, 170);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 2;
 }
-
-.icon-box__item:hover .icon-box__icon-wrapper svg path,
-.icon-box__item:hover .icon-box__icon-wrapper svg rect {
-  fill: #FFCF2D;
+.sidebar .active {
+  left: 0%;
 }
 
 /* Content */
 h1 {
-  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #000;
 }
 
+.main-section__title {
+  border-bottom: 2px solid rgba(149, 100, 170, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 23px;
+}
+.main-section__btn {
+  margin-bottom: 32px;
+}
+.main-section__btn .btn {
+  margin-bottom: 15px;
+}
+
+.slider {
+  margin-bottom: 34px;
+}
+.slider__item {
+  background: rgb(149, 100, 170);
+  border-radius: 10px;
+  position: relative;
+  padding: 16px 33px;
+  margin-left: 20px;
+}
+.slider__offer {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  background: #FFCF2D;
+  border-radius: 5px;
+  padding: 3px 10px 4px 10px;
+}
+.slider__price {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slider__price span {
+  background: #FFCF2D;
+  border-radius: 100%;
+  font-weight: 700;
+  font-size: 8px;
+  color: #000;
+  padding: 4px;
+  margin: 0 2px 0 5px;
+}
+
+.icon-box__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  /* Доп задачазадача 🫡 */
+}
+.icon-box__item:first-child {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.icon-box__item:first-child:hover path, .icon-box__item:first-child:hover rect {
+  fill: none;
+}
+.icon-box__item path, .icon-box__item rect {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.icon-box__item:hover path, .icon-box__item:hover rect {
+  fill: #FFCF2D;
+}
+.icon-box__icon-wrapper {
+  border-radius: 100%;
+  background: rgba(149, 100, 170, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  margin-right: 10px;
+}
+.icon-box__text {
+  font-weight: 700;
+  font-size: 12px;
+  color: rgb(149, 100, 170);
+}
+
 .header {
-  background: #9564AA;
+  background: rgb(149, 100, 170);
   margin-bottom: 15px;
 }
 .header .container {
@@ -452,9 +562,6 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
   padding: 7px;
 }
 .header__burger span {
@@ -494,4 +601,68 @@ h1 {
 }
 .menu a {
   font-size: 0;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn {
+  width: 100%;
+  background: #FFCF2D;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+}
+
+/* Checkbox */
+.custom-checkbox {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 160%;
+  color: #000;
+  position: relative;
+  padding-left: 30px;
+  display: block;
+  cursor: pointer;
+}
+.custom-checkbox a {
+  color: rgb(149, 100, 170);
+}
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid rgb(149, 100, 170);
+  border-radius: 5px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.custom-checkbox input[type=checkbox]:checked + .checkmark {
+  background-color: rgb(149, 100, 170);
+}
+
+.custom-checkbox input[type=checkbox]:checked + .checkmark:after {
+  content: url(../image/icons/check.svg);
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */

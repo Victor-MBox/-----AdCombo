@@ -1,0 +1,56 @@
+a, button
+    text-decoration: none
+    cursor: pointer
+    border: none
+    background: none
+
+.btn
+    width: 100%
+    background: $yellow
+    height: 55px
+    border-radius: 10px
+    border: none
+
+    font-weight: 700
+    font-size: 16px
+    text-align: center
+    color: #000
+
+/* Checkbox */
+.custom-checkbox
+    font-weight: 400
+    font-size: 10px
+    line-height: 160%
+    color: #000
+    position: relative
+    padding-left: 30px
+    display: block
+    cursor: pointer
+
+    a
+        color: $main-color
+
+    input[type="checkbox"]
+        display: none
+
+.checkmark
+    position: absolute
+    left: 0
+    top: 0
+    border: 1px solid $main-color
+    border-radius: 5px
+    display: inline-block
+    width: 20px
+    height: 20px
+    transition: .3s
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark
+    background-color: $main-color
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after
+    content: url(../image/icons/check.svg)
+    position: absolute
+    display: block
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)

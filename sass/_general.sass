@@ -1,8 +1,6 @@
 *
     box-sizing: border-box
-
-a
-    text-decoration: none
+    font-family: "Ubuntu", sans-serif
 
 .container
     width: 100%
@@ -11,18 +9,107 @@ a
     margin-right: auto
     margin-left: auto
 
-.icon-box__icon-wrapper svg path, .icon-box__icon-wrapper svg rect
-    transition: .2s
+/* Sidebar */
+.sidebar
+    position: fixed
+    left: -100%
+    top: 0
 
-.icon-box__item:hover .icon-box__icon-wrapper svg path,
-.icon-box__item:hover .icon-box__icon-wrapper svg rect
-    fill: #FFCF2D
+    height: 100vh
+    width: 100%
+    border-radius: 10px
+
+    background: rgba(149, 100, 170, )
+    transition: .3s
+    z-index: 2
+
+    .active
+        left: 0%
 
 /* Content */
-
 h1
-    font-family: "Ubuntu", sans-serif
     font-weight: 700
     font-size: 20px
     color: #000
 
+.main-section
+    &__title
+        border-bottom: 2px solid rgb(149 100 170 / 20%)
+        padding-bottom: 10px
+        margin-bottom: 23px
+    &__btn
+        margin-bottom: 32px
+        .btn
+            margin-bottom: 15px
+
+.slider
+    margin-bottom: 34px
+    &__item
+        background: $main-color
+        border-radius: 10px
+        position: relative
+        padding: 16px 33px
+        margin-left: 20px
+    &__offer
+        position: absolute
+        left: -20px
+        top: 50%
+        transform: translateY(-50%)
+
+        font-weight: 700
+        font-size: 14px
+        color: #000
+        background: $yellow
+        border-radius: 5px
+        padding: 3px 10px 4px 10px
+
+    &__price
+        font-weight: 700
+        font-size: 24px
+        color: #fff
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        span
+            background: $yellow
+            border-radius: 100%
+            font-weight: 700
+            font-size: 8px
+            color: #000
+            padding: 4px
+            margin: 0 2px 0 5px
+
+.icon-box
+    &__item
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+        &:first-child
+            justify-content: center
+            &:hover
+                path, rect
+                    fill: none
+
+        path, rect
+            transition: .2s
+
+        /* Доп задачазадача 🫡 */
+        &:hover
+            path, rect
+                fill: #FFCF2D
+
+    &__icon-wrapper
+        border-radius: 100%
+        background: rgb(149 100 170 / 10%)
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 30px
+        height: 30px
+        padding: 8px
+        margin-right: 10px
+
+    &__text
+        font-weight: 700
+        font-size: 12px
+        color: $main-color
