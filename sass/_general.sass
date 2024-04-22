@@ -9,28 +9,98 @@
     margin-right: auto
     margin-left: auto
 
+.page
+    overflow-x: hidden
+    &__decor
+        display: none 
+
 /* Sidebar */
 .sidebar
     position: fixed
     left: -100%
-    top: 0
+    top: 50px
 
     height: 100vh
     width: 100%
     border-radius: 10px
 
-    background: rgba(149, 100, 170, )
+    background: #F4EFF6 /* rgba(149 100 170 / 10%) */
+    border: 2px solid rgba(149, 100, 170, 0.2)
+    padding: 18px
     transition: .3s
     z-index: 2
 
-    .active
+    &_active
         left: 0%
+
+    &__logo
+        margin-bottom: 30px
+        a
+            font-weight: 700
+            font-size: 48px
+            color: $main-color
+
+    &__prof
+        display: flex
+        align-items: center
+        padding-bottom: 20px
+        border-bottom: 2px solid rgba(149, 100, 170, 0.2)
+        margin-bottom: 20px
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &__img
+        border-radius: 100%
+        margin-right: 13px
+    &__name
+        display: block
+        font-weight: 700
+        font-size: 16px
+        color: #000
+        margin-bottom: 5px
+
+.main-menu
+    padding-bottom: 20px
+    border-bottom: 2px solid rgba(149, 100, 170, 0.2)
+    margin-bottom: 20px
+    ul
+        li
+            display: flex
+            align-items: center
+            margin-bottom: 25px
+            &:last-child
+                margin-bottom: 0
+            svg
+                margin-right: 30px
+                path, rect
+                    transition: .2s
+            a
+                font-weight: 400
+                font-size: 16px
+                color: #000
+                &::after
+                    content: ''
+                    display: block
+                    width: 0%
+                    height: 2px
+                    background: $yellow
+                    border-radius: 10px
+                    transition: .3s
+            &:hover
+                svg
+                    path, rect
+                        fill: #FFCF2D
+                a::after
+                    width: 100%
 
 /* Content */
 h1
     font-weight: 700
     font-size: 20px
     color: #000
+
+.sale-box
+    display: none
 
 .main-section
     &__title
@@ -50,6 +120,8 @@ h1
         position: relative
         padding: 16px 33px
         margin-left: 20px
+        .btn
+            display: none
     &__offer
         position: absolute
         left: -20px
@@ -79,6 +151,19 @@ h1
             padding: 4px
             margin: 0 2px 0 5px
 
+/* SWIPER */
+.swiper
+    height: 80px
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+    bottom: 0
+
+.swiper-pagination-bullet
+    background: $yellow
+    opacity: 1
+.swiper-pagination-bullet-active
+    background: $main-color
+
 .icon-box
     &__item
         display: flex
@@ -97,6 +182,11 @@ h1
         &:hover
             path, rect
                 fill: #FFCF2D
+
+        &:nth-child(6)
+            display: none
+        &:nth-child(7)
+            display: none
 
     &__icon-wrapper
         border-radius: 100%
